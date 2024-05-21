@@ -1,44 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | E-commerce product page</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Frontend Mentor | E-commerce product page</title>
 </head>
 <body>
+    <div class="container">
+        <div class="header">
+            <div class="navbar">
+                
+               <div class="navSection">
+                <div class="log">
+                    <div class="menu" id="menu"><img src="images/icon-menu.svg" alt=""></div>
+                    <div class="logo"><img src="images/logo.svg" alt="logo"></div>
+                </div>
+                <nav id="nav">
+                    <ul class="navlist">
+                        <div class="close" id="close"><img src="images/icon-close.svg" alt=""></div>
+                        <a href="#"><li>Collections</li></a>
+                        <a href="#"><li>Men</li></a>
+                        <a href="#"><li>Women</li></a>
+                        <a href="#"><li>About</li></a>
+                        <a href="#"><li>Contact</li></a>
+                    </ul>
+                </nav>
+               </div>
+                <div class="icon-avatar">
+                    <div class="cart_icon">
+                        <img src="images/icon-cart.svg" alt="cart" id="cart">
+                        <div class="cart " id="mainCart">
+                            <div class="cart_head">Cart </div>
+                            <div class="cart_body empty1">
+                                <p class="empty">Your cart is empty</p>
+                                <div class="cartItem2">
+                                   <!--  <div class="itemImage">
+                                        <img src="images/image-product-1-thumbnail.jpg" alt="" id="itemImage">
+                                    </div>
+                                    <div class="itemDetail">
+                                        <span class="name">Fall Limited Edition Sneakers</span>
+                                        <div class=" priceTag"><span class="price-per">$ 150</span> X <span class="quantity">3</span> <span class="total">$ 375.00</span></div>
+                                    </div>
+                                    <div class="deleteBtn"><img src="images/icon-delete.svg" alt=""></div>-->
+                                </div>
+                                <button class="submit check hide">Checkout</button>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="images/image-avatar.png" alt="avatar" id="avatar">
+                </div>
+            </div>
+        </div>
+        <!-- preview start -->
+        <section class="preview closed">
+            <div class="closeIcon"><img src="images/icons8-multiply-30.png" alt=""></div>
+            <section class="mainPreview">
+                <div class="controls">
+                    <button class="prev" onclick="slide(-1)"><img style="width: 15px;" src="images/icon-previous.svg" alt=""></button>
+                    <button class="next" onclick="slide(1)"><img style="width: 15px;" src="images/icon-next.svg" alt=""></button>
+                </div>
+                <img src="images/image-product-1.jpg" alt="" id="mainPreviewImg">
+            </section>
+            <section class="previewList">
+                <div class="proPreview active" ><div class="overLay"></div><img src="images/image-product-1-thumbnail.jpg" alt="" class="preImg"></div>
+                <div class="proPreview"><div class="overLay"></div><img src="images/image-product-2-thumbnail.jpg" alt="" class="preImg"></div>
+                <div class="proPreview"><div class="overLay"></div><img src="images/image-product-3-thumbnail.jpg" alt="" class="preImg"></div>
+                <div class="proPreview"><div class="overLay"></div><img src="images/image-product-4-thumbnail.jpg" alt="" class="preImg"></div>
+            </section>
+        </section>
+        <!-- preview end -->
+        <!--content-->
+        <div class="content">
+            <div class="images">
+                <div class="controlss">
+                    <button class="prev" id="clPrev" onclick="mobileSlide(-1)"><img style="width: 15px;" src="images/icon-previous.svg" alt=""></button>
+                    <button class="next" id="clNxt" onclick="mobileSlide(1)"><img style="width: 15px;" src="images/icon-next.svg" alt=""></button>
+                </div>
+                <div class="real" id="bigImage">
+                    <img src="images/image-product-1.jpg" alt="" id="BigImage">
+                </div>
+                <div class="thumbnail">
+                    <img src="images/image-product-1.jpg" class="Timages" alt="product-1">
+                    <img src="images/image-product-2.jpg" class="Timages" alt="product-2">
+                    <img src="images/image-product-3.jpg" class="Timages" alt="product-3">
+                    <img src="images/image-product-4.jpg" class="Timages" alt="product-4">
+                </div>
+            </div>
+            <div  class="subject_side">
+                <h4 >Sneaker Company</h4>
+                <h1 id="title">Fall Limited Edition Sneakers</h1>
+                <p class="msg">These low-profile sneakers are your perfect casual wear companion. Featuring a 
+                    durable rubber outer sole, they’ll withstand everything the weather can offer.
+                </p>
+                <div class="price">
+                    <div class="dis"><h3 id="product_price"> $125.00</h3> <span id="dis">50%</span></div>
+                    <div class="actual" id="actual_price"><s>$250.00</s></div>
+                </div>
 
-  Collections
-  Men
-  Women
-  About
-  Contact
-
-  Sneaker Company
-
-  Fall Limited Edition Sneakers
-
-  These low-profile sneakers are your perfect casual wear companion. Featuring a 
-  durable rubber outer sole, they’ll withstand everything the weather can offer.
-
-  $125.00
-  50%
-  $250.00
-
-  0
-  Add to cart
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+                <div class="calculator">
+                    <div class="cal">
+                       <form action="">
+                        <div class="cal">
+                            <div class="value-button" id="decreament" value="Decreace value" ><img src="images/icon-minus.svg" alt=""></div>
+                            <input type="number" class="value-button" id="number" value="0" />
+                            <div class="value-button" id="increase" value="Increase number"><img src="images/icon-plus.svg" alt=""></div>
+                        </div>
+                       </form>
+                    </div>
+                    <button class="submit" id="submit"><img src="images/icon-cart.svg" alt=""> Add to cart</button>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+<script src="script.js"></script>
 </body>
 </html>
