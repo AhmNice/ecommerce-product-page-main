@@ -2,6 +2,8 @@
     font-family: Kumbh Sans;
     src: url(font/Kumbh_Sans/KumbhSans-VariableFont_YOPQ\,wght.ttf);
 }
+ .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
 *{
     padding: 0;
     margin: 0;
